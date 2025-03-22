@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunbase | Form Designer</title>
+    <link rel="stylesheet" href="./src/style/main.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <p class="from-heading">Form Designer</p>
+      <div>
+        <button class="copy-btn save-btn" onclick="copyHTML()">
+          Copy HTML
+        </button>
+
+        <button class="save-btn" onclick="saveForm()">Save</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <p class="sidebar-heading">Components</p>
+        <div class="component_container">
+          <div class="component" onclick="addElement('input')">
+            <p>Input</p>
+            <div>
+              <img
+                src="./src/assets/plus-icon.svg"
+                alt="icon"
+                class="img-icon"
+              />
+            </div>
+          </div>
+          <div class="component" onclick="addElement('select')">
+            <p>Select</p>
+            <div>
+              <img
+                src="./src/assets/plus-icon.svg"
+                alt="icon"
+                class="img-icon"
+              />
+            </div>
+          </div>
+          <div class="component" onclick="addElement('textarea')">
+            <p>Textarea</p>
+            <div>
+              <img
+                src="./src/assets/plus-icon.svg"
+                alt="icon"
+                class="img-icon"
+              />
+            </div>
+          </div>
+          <div class="component" onclick="addElement('checkbox')">
+            <p>Checkbox</p>
+            <div>
+              <img
+                src="./src/assets/plus-icon.svg"
+                alt="icon"
+                class="img-icon"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Builder Area -->
+      <div
+        class="form-area"
+        id="form-builder"
+        ondragover="allowDrop(event)"
+        ondrop="drop(event)"
+      >
+        <p></p>
+      </div>
+    </div>
+
+    <div class="preview-area" id="previewArea"></div>
+
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>
